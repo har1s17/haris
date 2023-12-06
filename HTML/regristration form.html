@@ -1,0 +1,78 @@
+    <Html>  
+    <head>   
+    <title>  
+    STUDENT REGISTRATION FORM  
+    </title>  lblError
+    </head>  
+    <body bgcolor=#92A8D1 >  
+     <style>
+body {
+  background-image: url('abc.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+label{color: #C0C0C0;}
+input{color: #C0C0C0;}
+h1   {color: #C0C0C0;}  
+</style>
+    <br>  
+    <br>  
+    <form>  
+      <h1><center> REGISTRATION FORM </h1> </center>
+    <label> Firstname </label>         
+    <input type="text" name="firstname" size="15"/> <br> <br>  
+    <label> Middlename: </label>     
+    <input type="text" name="middlename" size="15"/> <br> <br>  
+    <label> Lastname: </label>         
+    <input type="text" name="lastname" size="15"/> <br> <br>  
+    
+    <label>   
+    Course :  
+    </label>   
+    <select>  
+    <option value="Course">Course</option>  
+    <option value="BCA">BCA</option>  
+    <option value="BBA">BBA</option>  
+    <option value="B.Tech">B.Tech</option>  
+    <option value="MBA">MBA</option>  
+    <option value="MCA">MCA</option>  
+    <option value="M.Tech">M.Tech</option>  
+    </select>  
+       <img align="right" src="wall.jpg" width="500" height="250"> 
+    <br>  
+    <br>  
+    <label>   
+    Gender :  
+    </label><br>  
+    <input type="radio" name="male"/> Male <br>  
+    <input type="radio" name="female"/> Female <br>  
+    <input type="radio" name="other"/> Other  
+    <br>  
+    <br>  
+      
+    <label>   
+     <label for="mobileNumber">Enter Mobile Number:</label>
+    <input type="text" id="mobileNumber" onkeydown="validateMobileNumber(event)">
+    <p id="error-message" style="color: red;"></p>
+    <br>
+    Address  
+    <br>  
+    <textarea cols="80" rows="5" value="address">  
+    </textarea>  
+    <br> <br>     
+Email:<input type="text" id="txtEmail" onkeydown="ValidateEmail();" />
+<span id="lblError" style="color: red"></span>
+ 
+    <br> <br>  
+    Password:  
+    <input type="Password" id="pass" name="pass"> <br>   
+    <br> <br>  
+    Re-type password:  
+    <input type="Password" id="repass" name="repass"> <br> <br>  
+    <input type="button" onclick="validateForm()" value="Submit"/>  
+   
+    </form>  
+    <script src="./script.js"></script>
+    </body>  
+    </html>  

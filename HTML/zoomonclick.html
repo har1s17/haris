@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<h1>THE ON MOUSE OVER EVENT</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resize on Hover</title>
+    <style>
+        #resizableImage {
+            transition: all 0.3s ease-in-out; 
+        }
+    </style>
+    <script>
+        function enlargeImage() {
+            document.getElementById('resizableImage').style.transform = 'scale(1.2)';
+        }
+
+        function shrinkImage() {
+            document.getElementById('resizableImage').style.transform = 'scale(1)';
+        }
+    </script>
+</head>
+<body>
+
+    <img id="resizableImage" src="lion.gif" alt="Resizable Image" onmouseover="enlargeImage()" onmouseout="shrinkImage()">
+
+</body>
+</html>
+

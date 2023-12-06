@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Examination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .question-container {
+            margin-bottom: 20px;
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Online Examination</h1>
+
+<form id="examForm">
+    <!-- Question 1 -->
+    <div class="question-container">
+        <p>1. What is the capital of France?</p>
+        <label>
+            <input type="radio" name="q1" value="a"> a) Paris
+        </label>
+        <label>
+            <input type="radio" name="q1" value="b"> b) Rome
+        </label>
+        <label>
+            <input type="radio" name="q1" value="c"> c) Berlin
+        </label>
+    </div>
+
+    <!-- Add similar structures for the remaining questions -->
+
+    <div class="question-container">
+        <!-- Question 2 -->
+        <!-- ... -->
+
+        <!-- Question 3 -->
+        <!-- ... -->
+
+        <!-- ... -->
+
+        <!-- Question 10 -->
+        <!-- ... -->
+    </div>
+
+    <button type="button" class="submit-btn" onclick="submitExam()">Submit</button>
+</form>
+
+<script>
+    function submitExam() {
+        // Get user-selected answers
+        const answers = [];
+        for (let i = 1; i <= 10; i++) {
+            const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+            if (selectedAnswer) {
+                answers.push(selectedAnswer.value);
+            } else {
+                answers.push(null); // If no answer selected, you can handle it accordingly
+            }
+        }
+
+        // For demonstration purposes, log the answers to the console
+        console.log("User Answers:", answers);
+
+        // You can add logic to calculate the score or send the answers to a server for evaluation
+        // For simplicity, let's just alert the user for now
+        alert("Exam submitted successfully!");
+    }
+</script>
+
+</body>
+</html>
+

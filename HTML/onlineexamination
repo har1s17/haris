@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Examination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .exam-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .option {
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="exam-container">
+    <div class="question">
+        <p>1. What is the capital of France?</p>
+    </div>
+    <div class="options">
+        <div class="option">
+            <input type="radio" name="q1" value="Paris"> Paris
+        </div>
+        <div class="option">
+            <input type="radio" name="q1" value="Berlin"> Berlin
+        </div>
+        <div class="option">
+            <input type="radio" name="q1" value="London"> London
+        </div>
+    </div>
+
+    <div class="question">
+        <p>2. What is the largest mammal?</p>
+    </div>
+    <div class="options">
+        <div class="option">
+            <input type="radio" name="q2" value="Elephant"> Elephant
+        </div>
+        <div class="option">
+            <input type="radio" name="q2" value="Blue Whale"> Blue Whale
+        </div>
+        <div class="option">
+            <input type="radio" name="q2" value="Giraffe"> Giraffe
+        </div>
+    </div>
+
+    <button class="submit-btn" onclick="submitExam()">Submit</button>
+</div>
+
+<script>
+    function submitExam() {
+        // You can implement logic to calculate scores and handle submission here
+        alert('Exam submitted!');
+    }
+</script>
+
+</body>
+</html>
+
